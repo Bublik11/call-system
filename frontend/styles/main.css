@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgb(243, 243, 243);
+}
+
+h1 {
+    text-align: center;
+}
+
+div.main {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+form.appeal-form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+label, input, textarea {
+    margin: 5px 0;
+    resize: none;
+}
+
+input#sendBtn {
+    margin: 5px auto;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 15px;
+}
+
+input#sendBtn:hover {
+    height: 30px;
+    background-color: rgb(192, 192, 192);
+    border-radius: 15px;
+}
