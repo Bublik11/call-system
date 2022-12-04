@@ -23,13 +23,19 @@ function sendData(){
         
         //отправка json на сервер
         $.ajax({
-            type: "POST",
-            url: "http://localhost:8080/",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
+            url: 'http://localhost:8080/',
+            type: 'post',
+            contentType: 'application/json',
             data: JSON.stringify(jsondata),
-            success: successQuery,
-            error: failQuery
+            success: () => {
+                //Выполняется в случае успешного отправления json
+                $('form.appeal-form')[0].reset();
+                alert('Ваше сообщение успешно отправлено')
+            },
+            error: () =>{
+                //Выполняется в случае ошибки отправления json
+                alert('Сообщение не удалось отправить')
+            }
         });
 
     });
