@@ -10,11 +10,9 @@ class AppealBase(BaseModel):
     message: str
 
 
-class Appeal(AppealBase):
+class AppealDB(AppealBase):
     id: int
-    checked: bool = False
     created_at: date
-    update_at: date
 
     class Config:
         orm_mode = True
